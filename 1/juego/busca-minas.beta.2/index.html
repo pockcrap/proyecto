@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../../ajustemenu/accese/WhatsApp Image 2026-04-28 at 8.37.29 AM.jpeg" type="image/jpeg">
+  <title>Busca-Minas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body oncontextmenu="return false">
+
+  <style>
+
+  #juego-nuevo,
+  #tiempo,
+  #minas,
+  #menu {
+    position: relative;
+    top: 10px;
+  }
+
+   #botonMenu {
+   background: skyblue;
+   cursor: pointer;
+   padding: 10px 15px;
+   top: 10px;
+   left: 10px;
+   height: 50px;
+   font-size: 22px;
+   position: fixed;
+   z-index: 2000;
+   }
+
+   #botonMenu:hover {
+    background: deepskyblue;
+   }
+
+   #MenuLateral {
+    position: fixed;
+    top: 0;
+    left: -160px;
+    width: 150px;
+    height: 100%;
+    background: skyblue;
+    padding-top: 20px;
+    z-index: 1990;
+    padding: 62px 0px 0px 0px;
+   }
+
+   #MenuLateral.abierto {
+    left: 0;
+   }
+
+   #MenuLateral button {
+    width: 100%;
+    padding: 20px 15px;
+    cursor: pointer;
+    background: skyblue;
+    font-size: 20px;
+    border: none;
+   }
+
+   #MenuLateral button:hover {
+    background: deepskyblue;
+   }
+
+   .uno {
+    background: white;
+   }
+
+   .uno:hover {
+    background: darkgray;
+   }
+
+   .dos {
+    background: skyblue;
+   }
+
+   .dos:hover {
+    background: deepskyblue;
+   }
+
+   .tres {
+    background: yellowgreen;
+   }
+
+   .tres:hover {
+    background: green;
+   }
+
+   .cuatro {
+   background: orange;
+   }
+
+   .cuatro:hover {
+    background: orangered;
+   }
+
+   .cinco {
+    background: red;
+   }
+
+   .cinco:hover {
+    background: darkred;
+   }
+
+   #tiempo {
+    background: white;
+    color: black;
+   }
+
+   #menu {
+    background: skyblue;
+    cursor: pointer;
+   }
+
+   #menu:hover {
+    background: deepskyblue;
+   }
+
+    #pantallaDeInicio {
+       background: linear-gradient(to right, skyblue, blue);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        z-index: 1000;
+        overflow: auto;
+        overscroll-behavior: contain;
+        padding-top: 40px;
+    }
+
+    #pantallaDeInicio button {
+        min-width: 160px;
+        height: 50px;
+        min-width: 180px;
+        max-width: 180px;
+        font-size: 16px;
+        padding: 0;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
+    *{
+      transition: all 0.5s;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to right, skyblue, blue);
+      text-align: center;
+      margin: 0;
+      padding: 70px 0 0 0;
+      user-select: none;
+      user-select: none;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    table {
+      background: slategray;
+      margin: 20px auto;
+    }
+
+    td {
+      border: rgba(0, 0, 0, 0.25) 1px solid;
+      text-align: center;
+      font-size: 120%;
+      color: white;
+    }
+
+    #juego-nuevo,
+    td,
+    #minas,
+    #menu,
+    #tiempo,
+    #pantallaDeInicio button,
+    #botonMenu {
+      box-shadow: inset 3px 3px 0 0 rgba(255, 255, 255, 0.5),
+        inset -3px -3px 0 0 rgba(0, 0, 0, 0.5);
+    }
+
+    #juego-nuevo,
+    #minas,
+    #menu,
+    #tiempo {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #juego-nuevo {
+      background: skyblue;
+      cursor: pointer;
+    }
+
+    #juego-nuevo:hover {
+      background: deepskyblue;
+    }
+
+    #minas {
+      background: black;
+      color: red;
+    }
+
+
+  </style>
+
+  <br>
+
+ <div id="botonMenu" onclick="abrirMenu()">
+  ☰
+ </div>
+
+ <div id="MenuLateral">
+ <button onclick="volver()">Volver a el inicio</button>
+ <button id="botonAudio" onclick="toggleAudio()">🔊</button>
+ <button onclick="cambiarFondo()">🎨</button>
+ </div>
+
+ <span id="menu" onclick="volverAlInicio()">
+    volver
+ </span>
+
+ <div id="pantallaDeInicio">
+    <H1> Busca Minas </H1>
+    <p>Dificultad</p>
+    <button class="uno" onclick="ajustes()">Personalizado</button>
+    <button class="dos" onclick="iniciarConDificultad('normal')">Normal</button>
+    <button class="tres" onclick="iniciarConDificultad('dificil')">🔥Dificil</button>
+    <button class="cuatro" onclick="iniciarConDificultad('pesadilla')">💀Pesadilla</button>
+    <button class="cinco" onclick="iniciarConDificultad('infierno')">💀🔥Infierno🔥💀</button>
+ </div>
+
+  <span id="juego-nuevo" onclick="nuevoJuego()">
+    ↺
+  </span>
+
+  <span id="tiempo">
+  000
+  </span>
+
+  <span id="minas">
+    000
+  </span>
+
+  <table cellspacing="0" cellpadding="0" id="tablero">
+  </table>
+
+  <script>
+    let musica_menu = new Audio("sonido/Hotel.mpeg")
+    let musica_juego = new Audio("sonido/canyourealycallthishotel,ididntreceiveamintonmypilloworanything.mpeg")
+    let sonido_ganador = new Audio("sonido/ganador.aac")
+    let sonido_perdedor = new Audio("sonido/perdedor.aac")
+    let sonido_descubrir = new Audio("sonido/descubrir.aac")
+    let sonido_abrirarea = new Audio("sonido/abrirarea.aac")
+    let sonido_marca = new Audio("sonido/marcar.aac")
+    let tiempo = 0
+    let intervaloTiempo = null
+    let filas = 20
+    let columnas = 20
+    let lado = 30
+    let marcas = 0
+    let minas = filas * columnas * 0.1
+    let tablero = []
+    let enJuego = true
+    let juegoIniciado = false
+    let sonar_musica = false
+    let menuAbierto = false
+    let audioActivo = true
+    let fondoActual = 0
+    let fondos = [
+      "linear-gradient(to right, skyblue, blue)",
+      "url('fondos/fondo3.gif')",
+      "url('fondos/fondo4.gif')",
+      "url('fondos/fondo5.gif')"
+    ]
+    musica_juego.loop = true
+    musica_menu.loop = true
+    sonido_abrirarea.volume = 0.4
+    sonido_ganador.volume = 0.5
+    sonido_perdedor.volume = 0.5
+    sonido_marca.volume = 0.4
+    musica_juego.volume = 0.3
+    musica_menu.volume = 0.3
+
+    function abrirMenu() {
+      let menulateral = document.getElementById("MenuLateral")
+      menuAbierto = !menuAbierto
+      if(menuAbierto) {
+        menulateral.classList.add("abierto")
+      } else {
+        menulateral.classList.remove("abierto")
+      }
+    }
+
+    function toggleAudio() {
+     audioActivo = !audioActivo
+     let boton = document.getElementById("botonAudio")
+     if(audioActivo) {
+      boton.innerHTML = "🔊"
+      musica_menu.muted = false
+      musica_juego.muted = false 
+      sonido_abrirarea.muted = false
+      sonido_descubrir.muted = false
+      sonido_ganador.muted = false
+      sonido_marca.muted = false
+      sonido_perdedor.muted = false
+     } else {
+      boton.innerHTML = "🔇"
+      musica_menu.muted = true
+      musica_juego.muted = true
+      sonido_abrirarea.muted = true
+      sonido_descubrir.muted = true
+      sonido_ganador.muted = true
+      sonido_marca.muted = true
+      sonido_perdedor.muted = true
+     }
+    }
+
+    function cambiarFondo() {
+      fondoActual++
+      if(fondoActual>= fondos.length) {
+        fondoActual = 0
+      }
+      let fondo = fondos[fondoActual]
+      document.body.style.backgroundImage = fondo
+      document.body.style.backgroundSize = "cover"
+      document.body.style.backgroundPosition = "center"
+      let inicio = 
+      document.getElementById("pantallaDeInicio")
+      inicio.style.backgroundImage = fondo
+      inicio.style.backgroundSize = "cover"
+      inicio.style.backgroundPosition = "center"
+    }
+
+    function volver() {
+      window.location.href = "../../../index.html"
+    }
+
+    function Reproducir(sonido) {
+      if(!audioActivo) return
+      let copia = sonido.cloneNode()
+      copia.volume = sonido.volume
+      copia.play()
+    }
+
+    function menumusicainicio() {
+      if(sonar_musica) return
+      let inicio = document.getElementById("pantallaDeInicio")
+      if (!inicio || inicio.style.display === "none") return
+      musica_menu.currentTime = 0
+      musica_menu.play().catch(() => {})
+      sonar_musica = true
+      document.removeEventListener("click",menumusicainicio)
+    }
+
+    function musicamenu() {
+      musica_juego.pause()
+      musica_juego.currentTime = 0
+      if (musica_menu.paused) musica_menu.play()
+    }
+
+    function musicajuego() {
+      musica_menu.pause()
+      musica_menu.currentTime = 0
+      musica_juego.currentTime = 0
+      musica_juego.play().catch(() => {})
+    }
+    
+    function iniciarCronometro() {
+        if (intervaloTiempo) return 
+        intervaloTiempo = setInterval(() => {
+            tiempo++
+            actualizarTiempo()
+        }, 1000)
+    }
+
+    function detenerCronometro() {
+        clearInterval(intervaloTiempo)
+        intervaloTiempo = null
+    }
+
+    function actualizarTiempo() {
+        let panel = document.getElementById("tiempo")
+        panel.innerHTML = tiempo.toString().padStart(3,"0")
+    }
+
+    async function volverAlInicio() {
+        let confirmacion = await Swal.fire({
+            title: "¿Deseas volver a seleccionar dificultad?",
+            text: "perderas tu partida actual",
+            icon: "warning",
+            confirmButtonText: "Si",
+            cancelButtonText: "No",
+            showCancelButton: true
+        })
+
+        if (!confirmacion.isConfirmed) return
+
+        document.getElementById("pantallaDeInicio").style.display = "flex"
+        document.getElementById("tablero").innerHTML = ""
+        enJuego = false
+        musicamenu()
+    }
+
+    function cambiarValor() {
+    let valor = document.getElementById("dificultad").value
+    document.getElementById("valor-dificultad").innerText
+    = valor + "%"
+    }
+
+    function iniciarConDificultad(nivel) {
+      sonar_musica = true
+      musica_menu.pause()
+      musica_menu.currentTime = 0
+      musicajuego()
+        switch(nivel){
+            case "normal":
+            filas = 10
+            columnas = 10
+            minas = 10
+            break
+
+            case "dificil":
+            filas = 20
+            columnas = 20
+            minas = 70
+            break
+
+            case "pesadilla":
+            filas = 30
+            columnas = 30
+            minas = 250
+            break
+
+            case "infierno":
+            filas = 33
+            columnas = 50
+            minas = 666
+        }
+
+      document.getElementById("pantallaDeInicio").style.display
+      = "none"
+      nuevoJuego()
+    }    
+
+    function nuevoJuego() {
+      reiniciarVariables()
+      generarTableroHTML()
+      generarTableroJuego()
+      añadirEventos()
+      refrescarTablero()
+    }
+
+    async function ajustes() {
+      const {
+        value: ajustes
+      } = await Swal.fire({
+        title: "Modo Personalizado",
+        html: `
+                Dificultad &nbsp; (cantidad de minas)
+                <br>
+                <br>
+                <input onchange="cambiarValor()" oninput="this.onchange()" id="dificultad" type="range" min="10" max="50" step="1" value=10 onchange="">
+                <span id="valor-dificultad">10%</span>
+                <br>
+                <br>
+                Filas
+                <br>
+                <input class="swal2-input" type="number" value=10 id="filas" min="10" max="50">
+                <br>
+                Columnas
+                <br>
+                <input class="swal2-input" type="number" value=10 id="columnas" min="10" max="50">
+                <br>
+                `,
+        confirmButtonText: "Establecer",
+        cancelButtonText: "Cancelar",
+        showCancelButton: true,
+        preConfirm: () => {
+            let columnas = parseInt(document.getElementById("columnas").value)
+            let filas = parseInt(document.getElementById("filas").value)
+            let dificultad = parseInt(document.getElementById("dificultad").value)
+            if (isNaN(filas)) filas = 10
+            if (isNaN(columnas)) columnas = 10
+            if (isNaN(dificultad)) dificultad = 10
+            if (filas < 10 || filas > 50 || columnas < 10 || columnas > 50) {
+              Swal.showValidationMessage("demaciadas o muy pocas filas y columnas, deben estar entre 10-50")
+            }
+          return {
+            filas,
+            columnas,
+            dificultad
+          }
+        }
+      })
+      if (!ajustes) {
+        return
+      }
+      filas = Math.floor(ajustes.filas)
+      columnas = Math.floor(ajustes.columnas)
+      minas = Math.floor(columnas * filas * ajustes.dificultad / 100)
+      let inicio = document.getElementById("pantallaDeInicio")
+      if (inicio) {
+        inicio.style.display = "none"
+      }
+      musicajuego()
+      nuevoJuego()
+    }
+
+    function reiniciarVariables() {
+      marcas = 0
+      enJuego = true
+      juegoIniciado = false
+      tiempo = 0
+      detenerCronometro()
+      actualizarTiempo()
+    }
+
+    function generarTableroHTML() {
+      let html = ""
+      for (let f = 0; f < filas; f++) {
+        html += `<tr>`
+        for (let c = 0; c < columnas; c++) {
+          html += `<td id="celda-${c}-${f}" style="width:${lado}px;height:${lado}px">`
+          html += `</td>`
+        }
+        html += `</tr>`
+      }
+      let tableroHTML = document.getElementById("tablero")
+      tableroHTML.innerHTML = html
+      tableroHTML.style.width = columnas * lado + "px"
+      tableroHTML.style.height = filas * lado + "px"
+      tableroHTML.style.background = "slategray"
+    }
+
+    function añadirEventos() {
+      for (let f = 0; f < filas; f++) {
+        for (let c = 0; c < columnas; c++) {
+          let celda = document.getElementById(`celda-${c}-${f}`)
+          celda.addEventListener("dblclick", function(me) {
+            dobleClic(celda, c, f, me)
+          })
+          celda.addEventListener("mouseup", function(me) {
+            clicSimple(celda, c, f, me)
+          })
+        }
+      }
+    }
+
+    function dobleClic(celda, c, f, me) {
+      if (!enJuego) {
+        return
+      }
+      abrirArea(c, f)
+      refrescarTablero()
+    }
+
+    function clicSimple(celda, c, f, me) {
+      if (!enJuego) {
+        return
+      }
+      if (tablero[c][f].estado == "descubierto") {
+        return
+      }
+      switch (me.button) {
+        case 0:
+          if (tablero[c][f].estado == "marcado") {
+            break
+          }
+
+          while (!juegoIniciado && tablero[c][f].valor == -1) {
+            generarTableroJuego()
+          }
+          tablero[c][f].estado = "descubierto"
+          Reproducir(sonido_descubrir)
+          if (!juegoIniciado) {
+            iniciarCronometro()
+            juegoIniciado = true
+          }
+          if (tablero[c][f].valor == 0) {
+        
+            abrirArea(c, f)
+          }
+          break;
+        case 1:
+          break;
+        case 2:
+          if (tablero[c][f].estado == "marcado") {
+            tablero[c][f].estado = undefined
+            marcas--
+            Reproducir(sonido_marca)
+          } else {
+            tablero[c][f].estado = "marcado"
+            marcas++
+            Reproducir(sonido_marca)
+          }
+          break;
+        default:
+          break;
+      }
+      refrescarTablero()
+    }
+
+    function abrirArea(c, f) {
+      for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+          if (i == 0 && j == 0) {
+            continue
+          }
+          try {
+            if (tablero[c + i][f + j].estado != "descubierto") {
+              if (tablero[c + i][f + j].estado != "marcado") {
+                tablero[c + i][f + j].estado = "descubierto"
+                sonido_abrirarea.play()
+                if (tablero[c + i][f + j].valor == 0) {
+                  abrirArea(c + i, f + j)
+                }
+              }
+            }
+          } catch (e) {}
+        }
+      }
+    }
+
+    function refrescarTablero() {
+      for (let f = 0; f < filas; f++) {
+        for (let c = 0; c < columnas; c++) {
+          let celda = document.getElementById(`celda-${c}-${f}`)
+          if (tablero[c][f].estado == "descubierto") {
+            celda.style.boxShadow = "none"
+            switch (tablero[c][f].valor) {
+              case -1:
+                celda.innerHTML = `<i class="fas fa-bomb"></i>`
+                celda.style.color = "black"
+                celda.style.background = "white"
+                break;
+              case 0:
+                break
+              default:
+                celda.innerHTML = tablero[c][f].valor
+                break;
+            }
+          }
+          if (tablero[c][f].estado == "marcado") {
+            celda.innerHTML = `<i class="fas fa-flag"></i>`
+            celda.style.background = `cadetblue`
+          }
+          if (tablero[c][f].estado == undefined) {
+            celda.innerHTML = ``
+            celda.style.background = ``
+          }
+        }
+      }
+      verificarGanador()
+      verificarPerdedor()
+      actualizarPanelMinas()
+    }
+
+    function actualizarPanelMinas() {
+      let panel = document.getElementById("minas")
+      panel.innerHTML = minas - marcas
+    }
+
+    function verificarGanador() {
+      for (let f = 0; f < filas; f++) {
+        for (let c = 0; c < columnas; c++) {
+          if (tablero[c][f].estado != `descubierto`) { //Si la mina está cubeirta
+            if (tablero[c][f].valor == -1) {
+              continue
+            } else {
+              return
+            }
+          }
+        }
+      }
+      detenerCronometro()
+      let tableroHTML = document.getElementById("tablero")
+      tableroHTML.style.background = "green"
+      enJuego = false
+      Reproducir (sonido_ganador)
+    }
+
+    function verificarPerdedor() {
+      for (let f = 0; f < filas; f++) {
+        for (let c = 0; c < columnas; c++) {
+          if (tablero[c][f].valor == -1 &&
+             tablero[c][f].estado == "descubierto") {
+              detenerCronometro()
+              let tableroHTML = document.getElementById("tablero")
+              tableroHTML.style.background = "red"
+              enJuego = false
+              Reproducir (sonido_perdedor)
+      for (let f = 0; f < filas; f++) {
+        for (let c = 0; c < columnas; c++) {
+          if (tablero[c][f].valor == -1) {
+            let celda = document.getElementById(`celda-${c}-${f}`)
+            celda.innerHTML = `<i class="fas fa-bomb"></i>`
+            celda.style.color = "black"
+         }
+        }
+      }
+      return
+    }
+  }
+ }
+}
+
+    function generarTableroJuego() {
+      vaciarTablero()
+      ponerMinas()
+      contadoresMinas()
+    }
+
+    function vaciarTablero() {
+      tablero = []
+      for (let c = 0; c < columnas; c++) {
+        tablero.push([])
+      }
+    }
+
+    function ponerMinas() {
+      for (let i = 0; i < minas; i++) {
+        let c
+        let f
+
+        do {
+          c = Math.floor(Math.random() * columnas)
+          f = Math.floor(Math.random() * filas)
+        } while (tablero[c][f]);
+
+        tablero[c][f] = {
+          valor: -1
+        } 
+      }
+    }
+
+    function contadoresMinas() {
+      for (let f = 0; f < filas; f++) {
+        for (let c = 0; c < columnas; c++) {
+          if (!tablero[c][f]) {
+            let contador = 0
+           
+            for (let i = -1; i <= 1; i++) {
+              for (let j = -1; j <= 1; j++) {
+                if (i == 0 && j == 0) {
+                  continue
+                }
+                try {
+                  if (tablero[c + i][f + j].valor == -1) {
+                    contador++
+                  }
+                } catch (e) {}
+              }
+            }
+            tablero[c][f] = {
+              valor: contador
+            }
+          }
+        }
+      }
+    }
+
+    document.addEventListener("click",menumusicainicio)
+
+  </script>
+</body>
+
+</html>

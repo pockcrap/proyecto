@@ -1,0 +1,227 @@
+[
+    {
+        "categoria": "Geografía e Historia",
+        "pregunta": "¿Cuál es el río más largo del mundo?",
+        "respuesta": "Amazonas",
+        "incorrecta1": "Yangtsé",
+        "incorrecta2": "Nilo",
+        "incorrecta3": "Misisipi",
+        "imagen": "https://billiken.lat/wp-content/uploads/2023/05/1-14.jpg"
+    },
+        {
+        "categoria": "Geografía e Historia",
+        "pregunta": "¿Quién descubrió América?",
+        "respuesta": "Cristóbal Colón",
+        "incorrecta1": "Napoleón Bonaparte",
+        "incorrecta2": "César Chávez",
+        "incorrecta3": "Fernando de Magallanes",
+        "imagen": "https://www.socialhizo.com/images/mapas/mapas-america/mapa-de-america-topografia-socialhizo.jpg"
+    },
+        {
+        "categoria": "Geografía e Historia",
+        "pregunta": "¿Cuál es el continente mas grande?",
+        "respuesta": "Asia",
+        "incorrecta1": "África",
+        "incorrecta2": "Europa",
+        "incorrecta3": "América",
+        "imagen": "https://tse1.mm.bing.net/th/id/OIP.5RqClSY6piT3DEwtVCfEYwHaJD?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+        {
+        "categoria": "Geografía e Historia",
+        "pregunta": "¿Quién fue el primer presidente de México?",
+        "respuesta": "Guadalupe Victoria",
+        "incorrecta1": "Francisco I. Madero",
+        "incorrecta2": "Miguel Hidalgo",
+        "incorrecta3": "Benito Juárez",
+        "imagen": "https://humanidades.com/wp-content/uploads/2017/05/bandera-de-mexico-e1567990939713.jpg"
+    },
+        {
+        "categoria": "Geografía e Historia",
+        "pregunta": "¿Cuál es el océano más grande?",
+        "respuesta": "Pacífico",
+        "incorrecta1": "Ártico",
+        "incorrecta2": "Índico",
+        "incorrecta3": "Atlántico",
+        "imagen": "https://images5.alphacoders.com/350/thumb-1920-350767.jpg"
+    },
+    {
+        "categoria": "Matemáticas",
+        "pregunta": "¿Cuánto es x en la ecuación 2x+6=14?",
+        "respuesta": "4",
+        "incorrecta1": "128",
+        "incorrecta2": "3",
+        "incorrecta3": "9",
+        "imagen":"https://media.diariouno.com.ar/p/950a6554a12dcd2562210120918961c5/adjuntos/298/imagenes/009/394/0009394118/1200x0/smart/numerologia-y-el-numero-del-karmapng.png"
+    },
+    {
+        "categoria": "Matemáticas",
+        "pregunta": "¿Cuánto es la raíz cuadrada de 144?",
+        "respuesta": "12",
+        "incorrecta1": "15",
+        "incorrecta2": "14",
+        "incorrecta3": "44",
+        "imagen":"https://media.diariouno.com.ar/p/950a6554a12dcd2562210120918961c5/adjuntos/298/imagenes/009/394/0009394118/1200x0/smart/numerologia-y-el-numero-del-karmapng.png"
+    },
+    {
+        "categoria": "Matemáticas",
+        "pregunta": "¿Cuánto es 5/6+1/6?",
+        "respuesta": "6/6",
+        "incorrecta1": "1",
+        "incorrecta2": "6/12",
+        "incorrecta3": "6/7",
+        "imagen":"https://media.diariouno.com.ar/p/950a6554a12dcd2562210120918961c5/adjuntos/298/imagenes/009/394/0009394118/1200x0/smart/numerologia-y-el-numero-del-karmapng.png"
+    },
+    {
+        "categoria": "Matemáticas",
+        "pregunta": "¿Cuánto es (7^2)-10?",
+        "respuesta": "39",
+        "incorrecta1": "29",
+        "incorrecta2": "125",
+        "incorrecta3": "67",
+        "imagen":"https://media.diariouno.com.ar/p/950a6554a12dcd2562210120918961c5/adjuntos/298/imagenes/009/394/0009394118/1200x0/smart/numerologia-y-el-numero-del-karmapng.png"
+    },
+    {
+        "categoria": "Matemáticas",
+        "pregunta": "¿Cuánto es x en la ecuación 5x=45?",
+        "respuesta": "9",
+        "incorrecta1": "5",
+        "incorrecta2": "40",
+        "incorrecta3": "1997",
+        "imagen":"https://media.diariouno.com.ar/p/950a6554a12dcd2562210120918961c5/adjuntos/298/imagenes/009/394/0009394118/1200x0/smart/numerologia-y-el-numero-del-karmapng.png"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "¿Quién pintó \"La noche estrellada\"",
+        "respuesta": "Vincent Van Gogh",
+        "incorrecta1": "Claude Monet",
+        "incorrecta2": "Leonardo ca Vinci",
+        "incorrecta3": "Pablo Picasso",
+        "imagen":"https://th.bing.com/th/id/R.b809688733804c2a8634b6d2a9cfe4aa?rik=xkmd4bBeiNM7XA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-w13TCoNgpYU%2fU8l88NbBpgI%2fAAAAAAABDGM%2foUOaKLUoJ6c%2fs1600%2fpaisajes-hermosos-pinturas-hiperrealistas.jpg&ehk=Wp8gxn5vHZcU%2fBie5BnhGhpw%2f3yZNX7FNfP2szrJvTA%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "¿Quién escribió \"Don Quijote de la Mancha\"?",
+        "respuesta": " Miguel de Cervantes",
+        "incorrecta1": "Dante Alighieri",
+        "incorrecta2": "Don Juan Manuel",
+        "incorrecta3": "Jorge Manrique",
+        "imagen":"https://th.bing.com/th/id/R.bb3e2846b2d8b0d412d7a6b63e117158?rik=vE9oe8lXjjOoLQ&riu=http%3a%2f%2fwww.nvinoticias.com%2fsites%2fdefault%2ffiles%2farticulos%2f2023%2fDic%2flibros-portada.jpg&ehk=DbvKxBLMBLM8GsFJODtQW0z0ENEyrRrozApBedrXDwA%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "¿Quién pintó \"El grito\"",
+        "respuesta": "Edvard Munch",
+        "incorrecta1": "Henri Matisse",
+        "incorrecta2": "Paul Cézame",
+        "incorrecta3": "Mi primito gustavo",
+        "imagen":"https://th.bing.com/th/id/R.b809688733804c2a8634b6d2a9cfe4aa?rik=xkmd4bBeiNM7XA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-w13TCoNgpYU%2fU8l88NbBpgI%2fAAAAAAABDGM%2foUOaKLUoJ6c%2fs1600%2fpaisajes-hermosos-pinturas-hiperrealistas.jpg&ehk=Wp8gxn5vHZcU%2fBie5BnhGhpw%2f3yZNX7FNfP2szrJvTA%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "¿Quién escribió \"Romeo y Julieta\"?",
+        "respuesta": "William Shakespeare",
+        "incorrecta1": "Edgar Allan Poe",
+        "incorrecta2": "Jane Austen",
+        "incorrecta3": "Oscar Wilde",
+        "imagen":"https://th.bing.com/th/id/R.bb3e2846b2d8b0d412d7a6b63e117158?rik=vE9oe8lXjjOoLQ&riu=http%3a%2f%2fwww.nvinoticias.com%2fsites%2fdefault%2ffiles%2farticulos%2f2023%2fDic%2flibros-portada.jpg&ehk=DbvKxBLMBLM8GsFJODtQW0z0ENEyrRrozApBedrXDwA%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "¿Qué píntor es conocido por cortarse la oreja?",
+        "respuesta": "Vincent Van Gogh",
+        "incorrecta1": "Paul Gauguin",
+        "incorrecta2": "Henri Toulouse",
+        "incorrecta3": "Edgar Degas",
+        "imagen":"https://th.bing.com/th/id/R.b809688733804c2a8634b6d2a9cfe4aa?rik=xkmd4bBeiNM7XA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-w13TCoNgpYU%2fU8l88NbBpgI%2fAAAAAAABDGM%2foUOaKLUoJ6c%2fs1600%2fpaisajes-hermosos-pinturas-hiperrealistas.jpg&ehk=Wp8gxn5vHZcU%2fBie5BnhGhpw%2f3yZNX7FNfP2szrJvTA%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Películas y series",
+        "pregunta": "¿Cuál es la película más taquillera de la historia?",
+        "respuesta": "Avatar",
+        "incorrecta1": "Avengers: end game",
+        "incorrecta2": "Sharknado",
+        "incorrecta3": "¿Y donde estan las rubias?",
+        "imagen":"https://th.bing.com/th/id/R.312ad934c948793512213201d9fed02d?rik=NyLJ7l9wiLut9Q&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Pelíulas y series",
+        "pregunta": "¿Cuál es la serie más vista de la historia?",
+        "respuesta": "Squid Game",
+        "incorrecta1": "Sranger Things",
+        "incorrecta2": "Breaking Bad",
+        "incorrecta3": "El chavo del ocho",
+        "imagen":"https://tse3.mm.bing.net/th/id/OIP.tPys6VpHOe0YhLa9SbF0uwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+        "categoria": "Películas y series",
+        "pregunta": "Película mejor valorada de IMDb:",
+        "respuesta": "Sueño de fuga",
+        "incorrecta1": "El padrino",
+        "incorrecta2": "Cars 2",
+        "incorrecta3": "Ciudadano Kane",
+        "imagen":"https://th.bing.com/th/id/R.312ad934c948793512213201d9fed02d?rik=NyLJ7l9wiLut9Q&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Películas y series",
+        "pregunta": "¿Cómo se lama el actor que interpreta a Gregory Hause de \"Doctor Hause\"?",
+        "respuesta": "Hugh Laurie",
+        "incorrecta1": "Gregorio Hausemberg",
+        "incorrecta2": "Jackie Chan",
+        "incorrecta3": "Freddy Mercury",
+        "imagen":"https://tse3.mm.bing.net/th/id/OIP.tPys6VpHOe0YhLa9SbF0uwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+        "categoria": "Películas y series",
+        "pregunta": "¿Quién actuo de spider-man en 2007?",
+        "respuesta": "Tobey Maguire",
+        "incorrecta1": "Andrew Garfield",
+        "incorrecta2": "Bruce Lee",
+        "incorrecta3": "Michael Jackson",
+        "imagen":"https://th.bing.com/th/id/R.312ad934c948793512213201d9fed02d?rik=NyLJ7l9wiLut9Q&pid=ImgRaw&r=0"
+    },
+    {
+        "categoria": "Computación e informática",
+        "pregunta": "¿Qué es el hardwere de una computadora?",
+        "respuesta": "Las partes físicas",
+        "incorrecta1": "Las aplicaciones",
+        "incorrecta2": "Los virus",
+        "incorrecta3": "Los videojuegos",
+        "imagen":"https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+    },
+    {
+        "categoria": "Computación e informática",
+        "pregunta": "¿Qué significa URL?",
+        "respuesta": "Direccion de web",
+        "incorrecta1": "Lenguaje de programacion",
+        "incorrecta2": "Tipo de archivo",
+        "incorrecta3": "Un programa de edicion",
+        "imagen":"https://tse2.mm.bing.net/th/id/OIP.nnwvAiSPL2RrltFl8qPaLgHaEp?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+        "categoria": "Computación e informática",
+        "pregunta": "¿Qué es el softwere de una computadora?",
+        "respuesta": "Los programas",
+        "incorrecta1": "El teclado",
+        "incorrecta2": "La pantalla",
+        "incorrecta3": "El CPU",
+        "imagen":"https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+    },
+    {
+        "categoria": "Computación e informática",
+        "pregunta": "¿Qué significa algoritmo?",
+        "respuesta": "Pasos para resolver un problema",
+        "incorrecta1": "Programa de dibujo",
+        "incorrecta2": "Lenguaje de programacion",
+        "incorrecta3": "Dispositivo de almacenamiento",
+        "imagen":"https://tse2.mm.bing.net/th/id/OIP.nnwvAiSPL2RrltFl8qPaLgHaEp?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+        "categoria": "Computación e informática",
+        "pregunta": "¿Qué significa CPU?",
+        "respuesta": "Unidad Central de Procesamiento",
+        "incorrecta1": "Control de Programas Utiles",
+        "incorrecta2": "sistema de Control Personal Uniforme",
+        "incorrecta3": "Computadora Personal Universal",
+        "imagen":"https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+    }
+]
